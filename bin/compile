@@ -24,10 +24,8 @@ then
    do
      lang="${array[i]}"
      echo $lang 'training data'
-     
-     curl -L https://sourceforge.net/projects/tesseract-ocr-alt/files/tesseract-ocr-$TESSERACT_OCR_DATA_VERSION.$lang.tar.gz/download \
-  -o - | tar -xz -C $INSTALL_DIR_TRAINING_DATA -f -
-
+    
+     tar -xz -C $INSTALL_DIR_TRAINING_DATA -f tesseract-ocr-$TESSERACT_OCR_DATA_VERSION.$lang.tar.gz
    done
 fi
 
